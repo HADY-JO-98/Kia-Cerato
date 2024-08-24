@@ -1,0 +1,384 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:cursive;
+    font-size: 20px;
+}
+body{
+    background-color: #1e201e;
+}
+.head{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.head .nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    height: 65px;
+    background-color: #2A2D2E;
+}
+.head .nav .logo {
+    width: 115px;
+    margin: 0px 24% 0px 10px;
+}
+.head .nav .signout{
+    display:inline;
+}
+.head .nav .signin{
+    display:none;
+    width:300px;
+}
+.head .nav a, .head .nav .signin a, .head .nav .signout a{
+    text-align: center;
+    color: #eeeeee;
+    width: 85px;
+    margin: 15px;
+}
+.head .nav .signin p{
+    display: inline;
+    text-align: center;
+    color: #eeeeee;
+    width: 85px;
+    margin: 15px;
+}
+.head .nav .models {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    color: #eeeeee;
+    width: 75px;
+    margin: 15px;
+}
+.head .nav .models .dropdown{
+    display:none;
+}
+.head .nav .models:hover .dropdown{
+    display: block;
+    position: absolute;
+    width: 215px;
+    box-shadow: 4px 4px 10px 6px #31363f;
+    border-radius: 20px;
+    background-color: #3c3d37;
+    left: 0px;
+}
+.head .nav .models .dropdown a{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px;
+    width: 99%;
+    height: 45px;
+}
+.head .nav .models .dropdown a:hover {
+    background-color: #2A2D2E;
+    box-shadow: 4px 4px 10px 6px #31363f;
+    transform: scale(1.05);
+}
+.head .nav .models .dropdown .model1:hover {
+    border-radius: 20px 20px 0px 0px;
+}
+.head .nav .models .dropdown .model6:hover {
+    border-radius: 0px 0px 20px 20px;
+}
+.head .cont{
+    /* display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap; */
+    text-align: center;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    padding: 50px 0;
+}
+.head .cont h1{
+    font-size: 32px;
+    color:#eeeeee;
+}
+.head .cont .car {
+    display: inline-block;
+    width: 500px;
+    font-size: 32px;
+    text-align: center;
+    margin: 5%;
+    text-align: center;
+    color: #eeeeee;
+}
+.hero{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:25px 0px;
+    overflow: hidden;
+}
+.hero .model{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 25px;
+}
+.hero .model a{
+    text-decoration: none;
+    width: 99%;
+    display: contents;
+}
+.hero .model a .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+    border: #eeeeee 2px solid;
+    border-radius: 25px;
+    width: 30%;
+    height: 354px;
+}
+.hero .model a .card img{
+    width: 60%;
+    height: 115px;
+    border-radius: 25px;
+    margin:20px 35px;
+    transition: 1s;
+}
+.hero .model a .card img:hover{
+    transform: scale(1.2);
+    filter: grayscale(1);
+}
+.hero .model a .card h1{
+    text-align: center;
+    font-size: 26px;
+    color: antiquewhite;
+    margin: 0px 20px;
+}
+.hero .model a .card p{
+    width: 100%;
+    color: #eeeeee;
+    text-align: center;
+}
+.hero .model a .card p span{
+    color: rgb(175, 152, 121);
+}
+.hero .model a .left{
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.hero .model a .reveal{
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.hero .model a .right{
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.hero .model a .right.active{
+    transform: translateX(0px);
+    transform: translateY(0px);
+    opacity: 1;
+}
+.hero .model a .reveal.active{
+    transform: translateX(0px);
+    transform: translateY(0px);
+    opacity: 1;
+}
+.hero .model a .left.active{
+    transform: translateX(0px);
+    transform: translateY(0px);
+    opacity: 1;
+}
+@media only screen and (min-width:769px) and (max-width:1024px) {
+    .head .nav .logo {
+        width: 30%;
+        margin: 0px 0% 0px 0px;
+    }
+    .hero .model a .card {
+        width: 40%;
+        padding: 2px;
+    }
+    .hero .model a .card p{
+        margin: 0px;
+        font-size: 17px;
+    }
+    .hero .model a .card img {
+    margin: 12px 35px;
+    }
+}
+@media only screen and (min-width:720px) and (max-width:768px) {
+    .head .nav .logo {
+        width: 60px;
+        margin: 0px 10% 0px 0px;
+    }
+    .hero .model a .card {
+        width: 44%;
+    }
+    .hero .model a .card img {
+        width: 60%;
+        height: 115px;
+        border-radius: 25px;
+        margin: 16px 35px;
+        transition: 1s;
+    }
+    .hero .model a .card p {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:652px) and (max-width:719px) {
+    .head .nav .logo {
+        width: 60px;
+        margin: 0px 10% 0px 0px;
+    }
+    .hero .model a .card {
+        width: 44%;
+    }
+    .hero .model a .card img {
+        margin: 4px 35px;
+    }
+    .hero .model a .card p {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:580px) and (max-width:651px) {
+    .head .nav .logo {
+        width: 50px;
+        margin: 0px 7% 0px 0px;
+    }
+    .hero .model a .card {
+        width: 42%;
+    }
+    .hero .model a .card img {
+        margin: 5px 35px;
+    }
+    .hero .model a .card p {
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width:489px) and (max-width:579px) {
+    .head .nav .logo {
+        width: 50px;
+        margin: 0px 0% 0px 0px;
+    }
+    .head .cont .car{
+        margin:0px;
+        width: 460px;
+    }
+    .hero .model{
+        padding: 10px;
+    }
+    .hero .model a .card {
+        width: 65%;
+    }
+    .hero .model a .card img {
+        width: 60%;
+        height: 115px;
+        border-radius: 25px;
+        margin: 16px 35px;
+    }
+    .hero .model a .card p {
+        margin: 0px;
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width:426px) and (max-width:488px) {
+    .head .nav .logo {
+        width: 71px;
+        margin: 0px 0% 0px 0px;
+    }
+    .head .nav a, .head .nav .signin a, .head .nav .signout a {
+        text-align: center;
+        color: #eeeeee;
+        width: 85px;
+        margin: 0px;
+    }
+    .head .cont {
+        padding: 45px 0;
+    }
+    .head .cont .car {
+        margin: 50px 5% 5%;
+        width: 345px;
+        font-size: 27px;
+    }
+    .hero .model a .card {
+        width: 90%;
+    }
+    .hero .model a .card img {
+        width: 60%;
+        height: 115px;
+        border-radius: 25px;
+        margin: 16px 35px;
+    }
+    .hero .model a .card p {
+        margin: 0px;
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    *{
+        font-size: 16px;
+    }
+    .head{
+        min-width: 320px;
+        max-width: 474px;
+    }
+    .head .nav{
+        padding: 0;
+    }
+    .head .nav .logo {
+        width: 44px;
+        margin: 0px 5% 0px 0px;
+    }
+    .head .nav a, .head .nav .signin a, .head .nav .signout a{
+        margin: 5px;
+    }
+    .head .nav a,.head .nav .models,.head .nav p{
+        margin: 5px;
+        width: 60px;
+        font-size: 13px;
+    }
+    .head .nav .models:hover .dropdown{
+        width: 156px;
+        padding: 5px;
+        left: -95px;
+    }
+    .head .cont{
+        height: 532px;
+        overflow: hidden;
+    }
+    .head .cont .car {
+        width: 90%;
+        font-size: 26px;
+        margin: 25px 0px 0px;
+    }
+    .hero .model {
+        width: 90%;
+        padding: 5px;
+    }
+    .hero .model a .card{
+        width:90%;
+    }
+    .hero .model a .card h1 {
+        margin: 0px 35px;
+    }
+}
+@media Only Screen and (max-width:320px){
+    .head .nav a,.head .nav .models,.head .nav p{
+        margin: 5px;
+        font-size: 16px;
+    }
+    .head .cont .car {
+        width: 90%;
+        margin:25px 0px 0px 0px;
+    }
+}
+a{
+    text-decoration: none;
+}

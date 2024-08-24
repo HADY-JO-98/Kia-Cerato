@@ -1,0 +1,349 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:cursive;
+    font-size: 20px;
+}
+body{
+    background-color: #1e201e;
+}
+.head{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.head .nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    height: 65px;
+    background-color: #2A2D2E;
+}
+.head .nav .logo {
+    width: 115px;
+    margin: 0px 24% 0px 10px;
+}
+.head .nav a{
+    text-align: center;
+    color: #eeeeee;
+    margin: 15px;
+}
+.head .nav .models {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    color: #eeeeee;
+    width: 75px;
+    margin: 15px;
+}
+.head .nav .models .dropdown{
+    display:none;
+}
+.head .nav .models:hover .dropdown{
+    display: block;
+    position: absolute;
+    width: 215px;
+    box-shadow: 4px 4px 10px 6px #31363f;
+    border-radius: 20px;
+    background-color: #3c3d37;
+    left: 0px;
+}
+.head .nav .models .dropdown a{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px;
+    width: 99%;
+    height: 45px;
+}
+.head .nav .models .dropdown a:hover {
+    background-color: #2A2D2E;
+    box-shadow: 4px 4px 10px 6px #31363f;
+    transform: scale(1.05);
+}
+.head .nav .models .dropdown .model1:hover {
+    border-radius: 20px 20px 0px 0px;
+}
+.head .nav .models .dropdown .model6:hover {
+    border-radius: 0px 0px 20px 20px;
+}
+.head .cont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    padding: 50px 0;
+}
+.head .cont .carphoto {
+    width: 350px;
+    margin: 0px 40px 0px 65px;
+    border: #3C3D37 2px solid;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.head .cont .carphoto img {
+    max-width: 100%;
+    height: auto;
+}
+.head .cont .cardesc {
+    max-width: 60%;
+    font-size: 16px;
+    /* line-height: 1.5; */
+}
+.head .cont .cardesc p {
+    font-size: 30px;
+    font-weight: 1000;
+    color:antiquewhite;
+}
+.hero {
+    padding: 20px;
+    background-color: #1e201e;
+    margin: 0 auto;
+}
+.hero h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #eeeeee;
+}
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #3c3d37;
+}
+.specs-table th, .specs-table td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+    color: #eeeeee;
+}
+.specs-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+.specs-table tr:nth-child(even) {
+    background-color: #2A2D2E;
+}
+.specs-table tr:hover {
+    background-color: #1e201e;
+}
+
+@media only screen and (min-width:912px) and (max-width:1024px) {
+    .head .cont .carphoto {
+        height: 250px;
+        margin: 0px 5px 0px 27px;
+    }
+    .head .cont .carphoto img {
+        height: 250px;
+    }
+}
+@media only screen and  (min-width:769px) and (max-width:912px){
+    .head .cont .carphoto {
+        height: 250px;
+        margin: 0px 5px 0px 27px;
+    }
+    .head .cont .carphoto img {
+        height: 250px;
+    }
+    .head .cont .cardesc p{
+        max-width: 97%;
+        font-size: 21px;
+        /* line-height: 1.5; */
+        padding: 10px;
+    }
+}
+@media only screen and (min-width:701px) and (max-width:768px) {
+    .head .nav .logo {
+        width: 115px;
+        margin: 0px 15% 0px 0px;
+    }
+    .head .cont .carphoto {
+        height: 225px;
+        margin: 0px 5px 0px 20px;
+    }
+    .head .cont .carphoto img {
+        max-width: 100%;
+        height: 225px;
+    }
+    .head .cont .cardesc p {
+        font-size: 146%;
+        font-weight: 1000;
+        color: antiquewhite;
+    }
+}
+@media only screen and (min-width:650px) and (max-width:700px) {
+    .head .nav .logo {
+        width: 115px;
+        margin: 0px 24px 0px 0px;
+    }
+    .head .cont {
+        gap: 10px;
+    }
+    .head .cont .carphoto {
+        margin: 0px;
+    }
+    .head .cont .cardesc {
+        padding: 5px;
+    }
+    .head .cont .cardesc p {
+        font-size: 130%;
+    }
+}
+@media only screen and (min-width: 530px) and (max-width:649px) {
+    .head .nav .logo {
+        width: 60px;
+        margin: 0px 100px 0px 0px;
+    }
+    .head .nav a {
+        margin: 7px;
+    }
+    .head .cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .head .cont .carphoto {
+        margin: 0px;
+    }
+    .head .cont .cardesc {
+        max-width: 100%;
+        font-size: 16px;
+        /* line-height: 1.5; */
+        padding: 0px 3px 0px 30px;
+    }
+    .head .cont .cardesc p {
+        font-size: 18px;
+        font-weight: 1000;
+        color: antiquewhite;
+    }
+}
+@media only screen and (min-width:455px) and (max-width:529px){
+    .head .nav .logo {
+        width: 60px;
+        margin: 0px 50px 0px 0px;
+    }
+    .head .nav a {
+        margin: 6px;
+    }
+    .head .cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .head .cont .carphoto {
+        margin: 0px;
+    }
+    .head .cont .cardesc {
+        max-width: 100%;
+        font-size: 16px;
+        /* line-height: 1.5; */
+        padding: 0px 3px 0px 17px;
+    }
+    .head .cont .cardesc p {
+        font-size: 18px;
+        font-weight: 1000;
+        color: antiquewhite;
+    }
+    .head .cont .carphoto {
+        width:315px;
+        margin: 0px;
+        height: 210px;
+    }
+    .head .cont .carphoto img {
+        height: 225px;
+    }
+}
+@media only screen and (min-width:362px) and (max-width:454px){
+    .head .nav .logo {
+        width: 50px;
+        margin: 0px 15px 0px 0px;
+    }
+    .head .nav a {
+        display: flex;
+        margin: 3px;
+        font-size: 17px;
+    }
+    .head .nav a {
+        display: flex;
+        margin: 3px;
+        font-size: 16px;
+    }
+    .head .cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .head .cont .carphoto {
+        margin: 0px;
+    }
+    .head .cont .cardesc {
+        max-width: 100%;
+        font-size: 16px;
+        /* line-height: 1.5; */
+        padding: 0px 3px 0px 30px;
+    }
+    .head .cont .cardesc p {
+        font-size: 18px;
+        font-weight: 1000;
+        color: antiquewhite;
+    }
+    .head .cont .carphoto {
+        width:315px;
+        margin: 0px;
+        height: 210px;
+    }
+    .head .cont .carphoto img {
+        width: 311px;
+        height: 210px;
+    }
+}
+@media only screen and (min-width:320px) and (max-width:362px){
+    .head .nav .logo {
+        width: 46px;
+        margin: 0px 5px 0px 3px;
+    }
+    .head .nav a {
+        display: flex;
+        margin: 2px;
+        font-size: 16px;
+    }
+    .head .nav .models {
+        margin: 0px;
+    }
+    .head .cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .head .cont .carphoto {
+        margin: 0px;
+    }
+    .head .cont .cardesc {
+        max-width: 100%;
+        padding: 0px 3px 0px 14px;
+    }
+    .head .cont .cardesc p {
+        font-size: 18px;
+    }
+    .head .cont .carphoto {
+        width: 285px;
+        margin: 0px;
+        /* height: 210px; */
+    }
+    .head .cont .carphoto img {
+        width: 285px;
+        height: 178px;
+    }
+    .specs-table th, .specs-table td {
+        font-size: 16px;
+    }
+}
